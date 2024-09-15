@@ -14,7 +14,7 @@ function generateRandomNumberArray(low = -50, high = 50, n = 5) {
 }
 //#endregion Setup
 
-describe.only("multiplyNumbers", function () {
+describe("multiplyNumbers", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.multiplyNumbers).toBe("function");
@@ -67,7 +67,7 @@ describe("vote", function () {
   });
 });
 
-describe("concatenateStrings", function () {
+describe.only("concatenateStrings", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.concatenateStrings).toBe("function");

@@ -9,6 +9,7 @@
  * _unless_ either of the parameters is not a number,
  * in which case the string `"error"` is returned.
  */
+
 function multiplyNumbers(a, b) {
   if (typeof a !== "number" || typeof b !== "number") {
     return "error";
@@ -17,7 +18,30 @@ function multiplyNumbers(a, b) {
   return a * b;
 }
 
-//#endregion Guard
+//make function vote that takes user input for age: number
+//it at least 18, returns "Who would you like to vote for?"
+//if not 18 yet, returns "You must be 18 or older to vote. "
+
+function vote(age){
+  if (age >= 18) {
+    return "Who would you like to vote for?";
+  } else {
+    return "You must be 18 or older to vote.";
+  }
+}
+
+
+//return string a and b, unless a or b is not a string
+//if a or b isn't a string, return "error"
+function concatenateStrings (a, b) {
+  if ((typeof a !== "string") || (typeof b !== "string")) {
+    return "error";
+  } else {
+    return a + b;
+  }
+
+}
+//#endregion Guard 
 
 // --------------------------
 //#region Accumulator Variable
@@ -113,8 +137,8 @@ function makeBoard(cols, rows) {
  */
 module.exports = {
   multiplyNumbers,
-  // vote,
-  // concatenateStrings,
+  vote,
+  concatenateStrings,
   sumArray,
   // sumToN,
   // factorial,
