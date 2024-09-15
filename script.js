@@ -22,6 +22,13 @@ function multiplyNumbers(a, b) {
 //it at least 18, returns "Who would you like to vote for?"
 //if not 18 yet, returns "You must be 18 or older to vote. "
 
+/**
+ * 
+ * @param {number} age 
+ * @returns string, if 18 or older "Who would you like to vote for?", if less than 18 , "You must be 18 or older to vote. "
+ *
+ */
+
 function vote(age){
   if (age >= 18) {
     return "Who would you like to vote for?";
@@ -59,6 +66,49 @@ function sumArray(nums) {
   return total;
 }
 
+//Returns sum of all integrs from 1 to n
+//If n is 0 or negative, return 0
+//n is an integer
+
+//if... else
+//if n is 0 or negative , return 0
+//else return sum
+//-1 -> 0
+//0 -> 0 
+//1 -> 1
+//2 -> 2+1 -> 3
+//3 -> 3+2+1 ->6
+
+/** 
+* @param {int[]} nums
+* @returns the sum of positive numbers
+*/
+
+function sumToN(n){
+let total = 0;
+ for (let i=0; i <= n; i++ ){ 
+  total += i;
+ } return total;
+  }
+
+  //factorial (n: number) returns product of all ints
+  //from 1 to n.
+  //If n is 0, then 1 is returned
+  //If n is negative or not an int, return "error"
+
+  /**
+   * @param {[int]} number
+   * @returns the product of all numbers from 1 to n
+   */
+
+  function factorial(n){
+    if (n < 0)  return "error";
+    if (!Number.isInteger(n)) return "error";
+    let product = 1;
+    for (let i=2; i <= n; i++) {
+      product *= i;
+  } return product;
+  }
 //#endregion Accumulator Variable
 
 // --------------------------
@@ -140,8 +190,8 @@ module.exports = {
   vote,
   concatenateStrings,
   sumArray,
-  // sumToN,
-  // factorial,
+  sumToN,
+  factorial,
   // buildNArray,
   findMax,
   // findLongestString,
