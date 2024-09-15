@@ -67,7 +67,7 @@ describe("vote", function () {
   });
 });
 
-describe.only("concatenateStrings", function () {
+describe("concatenateStrings", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.concatenateStrings).toBe("function");
@@ -154,7 +154,7 @@ describe("sumToN", function () {
   });
 });
 
-describe("factorial", function () {
+describe.only("factorial", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.factorial).toBe("function");
