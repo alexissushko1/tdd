@@ -154,7 +154,7 @@ describe("sumToN", function () {
   });
 });
 
-describe.only("factorial", function () {
+describe("factorial", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.factorial).toBe("function");
@@ -246,7 +246,7 @@ describe("findMax", function () {
   });
 });
 
-describe("findLongestString", function () {
+describe.only("findLongestString", function () {
   describe("works with correct types", function () {
     it("is a function", function () {
       expect(typeof code.findLongestString).toBe("function");

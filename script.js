@@ -115,8 +115,27 @@ let total = 0;
 //#region Conditional Accumulation
 // --------------------------
 
+
+//buildArray(n: number) returns array of all ints from 1 to n
+//if n is 0 or negative , return empty array
+//if n is not integer, return "error"
+
+/** 
+ * @param {[int]} number
+ * @returns array of ints from 1 to n
+ */
+
+function buildNArray(n) {
+  if (!Number.isInteger(n)) return "error";
+  if (n <= 0) return [];
+
+  let array = [];
+  for (let i = 1; i <= n; i++) {
+    array.push(i);
+  } return array;
+}
 /**
- * @param {int[]} nums
+ * @param {[int]} nums
  * @returns the greatest number in the given array
  */
 function findMax(nums) {
@@ -127,6 +146,30 @@ function findMax(nums) {
     }
   }
   return max;
+}
+
+//findLongestString(string[]) returns longest string in
+//array of strings
+//If array is empty, return an empty string
+
+//if array is empty, return empty string
+//use for for loop to check for longest string
+
+/**
+ * @param {[array]} string
+ * @returns longest string unless if array is empty, return empty string
+ */
+
+function findLongestString (strings) {
+ if (strings.length === 0) {
+  return "";
+ }
+ let longest = strings[0];
+ for (str of strings){
+  if (str.length > longest.length) {
+    longest = str;
+  }
+ } return longest;
 }
 
 //#endregion Conditional Accumulation
@@ -192,9 +235,9 @@ module.exports = {
   sumArray,
   sumToN,
   factorial,
-  // buildNArray,
+  buildNArray,
   findMax,
-  // findLongestString,
+  findLongestString,
   // countPresent,
   // getDnaComplement,
   isSongInPlaylist,
